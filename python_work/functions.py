@@ -62,10 +62,17 @@ print(pkmn)
 def get_pokemon_dict(pokemon_name, pokemon_type='poison', natdex_number=None):
     """Returns information about a Pokemon"""
     pokemon = {'name': pokemon_name, 'type': pokemon_type}
+    if natdex_number:
+        pokemon['natdex_number'] = natdex_number
     return pokemon
 
 
 pkmn = get_pokemon_dict(pokemon_name='arbok', pokemon_type='poison')
+print(pkmn)
+
+
+pkmn = get_pokemon_dict(pokemon_name='zacian', pokemon_type='fairy',
+                        natdex_number=888)
 print(pkmn)
 
 
